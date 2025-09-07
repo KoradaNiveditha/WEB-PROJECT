@@ -5,13 +5,16 @@ const mongoose = require("mongoose");
 const multer = require("multer"); 
 const path = require("path"); 
 const fs = require("fs"); 
- 
+const MongoStore = require("connect-mongo");
+
 const User = require("./models/User"); 
 const Blog = require("./models/Blog"); 
  
 const app = express(); 
-const PORT = 3000; 
+const PORT = process.env.PORT || 3000;
 app.use(express.static("js"));  // expose js folder
+app.use(express.static("public"));
+
 
  
 // Connect to MongoDB Atlas 
@@ -23,7 +26,17 @@ mongoose.connect(
 //  Middleware 
 app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(bodyParser.json()); 
-app.use(session({ secret: "secret", resave: false, saveUninitialized: true })); 
+app.use(session({
+  secret: "secret",
+  resave: false,
+  saveUninitialized: true,
+  store: MongoStore.create({
+    mongoUrl: "mongodb+srv://niveditha:niveditha04@cluster0.tq9jnve.mongodb.net/finalWebDB?retryWrites=true&w=majority",
+    collectionName: "sessions"
+  }),
+  cookie: { maxAge: 1000 * 60 * 60 * 24 } // 1 day
+}));
+
 app.use(express.static("public")); 
 app.use("/uploads", express.static(path.join(__dirname, "uploads"))); // for serving images 
  
@@ -134,4 +147,5 @@ app.get("/profile-data", async (req, res) => {
 }); 
  
 //  Start Server 
-app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`)); 
+//app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`)); 
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
