@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minimalism | Wander & Wellness</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f8fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #4fd1c5, #81e6d9);
+      padding: 30px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    .destinations {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 360px;
+      height: 520px;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-content h3 {
+      margin: 0 0 12px;
+      font-size: 1.3rem;
+      color: #2a4365;
+    }
+
+    .card-content p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .read-more-btn {
+      margin-top: 10px;
+      background-color: #4fd1c5;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .read-more-btn:hover {
+      background-color: #38b2ac;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background-color: #e6f0f6;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Minimalist Travel</h1>
+    <p>Less baggage, more freedom</p>
+  </header>
+
+  <section class="destinations">
+    <div class="card">
+      <img src="images/japan.jpg" alt="Kyoto, Japan">
+      <div class="card-content">
+        <h3>Kyoto, Japan</h3>
+        <p>Explore Zen gardens, tea houses, and temples in a culture that celebrates simplicity and mindfulness.</p>
+        <p class="extra-info" style="display: none;">Kyoto offers peaceful surroundings perfect for slow travel and spiritual reflection, ideal for the minimalist mindset.</p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/iceland.jpg" alt="Iceland">
+      <div class="card-content">
+        <h3>Iceland</h3>
+        <p>Travel light while discovering waterfalls, volcanoes, and remote landscapes with nature as your only companion.</p>
+        <p class="extra-info" style="display: none;">Minimalist travelers love Iceland’s wild spaces where you can go days with just a backpack and natural beauty.</p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/thailand.jpg" alt="Pai, Thailand">
+      <div class="card-content">
+        <h3>Pai, Thailand</h3>
+        <p>Live simply in bamboo huts, surrounded by mountains and hot springs in this peaceful town in Northern Thailand.</p>
+        <p class="extra-info" style="display: none;">Pai’s calm atmosphere and low cost of living make it a favorite among backpackers and digital minimalists.</p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/spain.jpg" alt="Camino de Santiago, Spain">
+      <div class="card-content">
+        <h3>Camino de Santiago, Spain</h3>
+        <p>Walk the ancient pilgrimage trail with just a backpack and your thoughts—pure minimalist travel in motion.</p>
+        <p class="extra-info" style="display: none;">This journey teaches the beauty of owning less and moving slowly through meaningful places.</p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/nepal.jpg" alt="Nepal">
+      <div class="card-content">
+        <h3>Nepal</h3>
+        <p>Trek through the Himalayas with only what you need, and find clarity in the silence of mountain villages.</p>
+        <p class="extra-info" style="display: none;">Remote Himalayan trails are perfect for disconnecting from modern clutter and connecting with nature.</p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/mexico_beach.jpg" alt="Zipolite, Mexico">
+      <div class="card-content">
+        <h3>Zipolite, Mexico</h3>
+        <p>Disconnect from everything on this quiet, off-the-grid beach known for slow travel and zero distractions.</p>
+        <p class="extra-info" style="display: none;">No Wi-Fi, no crowds—just hammocks, sand, and the ocean. Zipolite is a minimalist dream escape.</p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Wander & Wellness. All rights reserved.
+  </footer>
+
+  <script src="../js/minimalism.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".read-more-btn");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const info = btn.previousElementSibling; // grabs the <p class="extra-info">
+      if (info.style.display === "none" || info.style.display === "") {
+        info.style.display = "block";
+        btn.textContent = "Read Less";
+      } else {
+        info.style.display = "none";
+        btn.textContent = "Read More";
+      }
+    });
+  });
+});
+  </script>
+  
+</body>
+</html>

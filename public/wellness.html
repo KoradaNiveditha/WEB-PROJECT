@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wellness | Wander & Wellness</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f8ff;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+      padding: 30px 20px;
+      text-align: center;
+      color: #1a3c72;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .wellness-tips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 360px;
+      height: auto;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .card-content h3 {
+      margin: 0 0 12px;
+      font-size: 1.3rem;
+      color: #1a3c72;
+    }
+
+    .card-content p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .extra-info {
+      display: none;
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .read-more-btn {
+      margin-top: 12px;
+      background-color: #1a3c72;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .read-more-btn:hover {
+      background-color: #164a9a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background-color: #d7e8fc;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Wellness & Self-Care</h1>
+    <p>Nurture your mind, body, and soul</p>
+  </header>
+
+  <section class="wellness-tips">
+    <div class="card">
+      <img src="images/meditation.jpg" alt="Meditation" />
+      <div class="card-content">
+        <h3>Daily Meditation</h3>
+        <p>Spend 10 minutes daily in meditation to reduce stress and improve focus.</p>
+        <div class="extra-info">Try guided meditation apps or practice deep breathing techniques to enhance your routine.</div>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/yoga_pose.jpg" alt="Yoga" />
+      <div class="card-content">
+        <h3>Yoga Practice</h3>
+        <p>Incorporate yoga stretches to increase flexibility and mental calmness.</p>
+        <div class="extra-info">Start with beginner poses and gradually increase session length as you get comfortable.</div>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/nature_walk.webp" alt="Nature Walk" />
+      <div class="card-content">
+        <h3>Nature Walks</h3>
+        <p>Take time outdoors for walks to reconnect with nature and boost your mood.</p>
+        <div class="extra-info">Try mindful walking by focusing on your breath and surroundings for a meditative experience.</div>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/healthy_sleep.jpg" alt="Healthy Sleep" />
+      <div class="card-content">
+        <h3>Sleep Hygiene</h3>
+        <p>Maintain a regular sleep schedule and create a restful environment.</p>
+        <div class="extra-info">Avoid screens an hour before bed and consider calming teas or journaling to unwind.</div>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/hydration.jpg" alt="Hydration" />
+      <div class="card-content">
+        <h3>Stay Hydrated</h3>
+        <p>Drink enough water daily to keep your body and mind refreshed.</p>
+        <div class="extra-info">Add slices of lemon, cucumber, or mint to your water for flavor and added benefits.</div>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    &copy; 2025 Wander & Wellness. All rights reserved.
+  </footer>
+
+  <script src="../js/wellness.js"></script>
+</body>
+</html>

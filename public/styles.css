@@ -1,0 +1,338 @@
+/* General Reset */
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
+}
+
+/* Navigation */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-item {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Featured Section */
+.featured {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Posts Row */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+/* Each Post Container (wraps text + image) */
+.col-md-6 {
+    flex: 1 1 48%;
+    display: flex;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    min-width: 300px;
+    max-width: 600px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.col-md-6:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Post Content */
+.post {
+    flex: 1;
+}
+
+/* Thumbnail Image */
+.thumbnail img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Extra Info Toggle */
+.extra-info {
+    
+    padding: 10px;
+    background-color: #e9ecef;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+}
+
+/* Responsive: Tablet & Below */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .col-md-6 {
+        flex-direction: row;
+        flex: 1 1 100%;
+        gap: 15px;
+    }
+
+    .thumbnail img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+/* Responsive: Small Phones */
+@media (max-width: 500px) {
+    .col-md-6 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .thumbnail {
+        margin-top: 10px;
+    }
+
+    .thumbnail img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+}
+
+/* Horizontal Scroll Section */
+.horizontal-scroll-section {
+    padding: 30px 10px;
+    background-color: #ffffff;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scroll-card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    border-radius: 10px;
+    padding: 20px;
+    width: 260px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff;
+}
+
+.scroll-card.food {
+    background: linear-gradient(to right, #ff9a8b, #ff6a88);
+}
+
+.scroll-card.adventure {
+    background: linear-gradient(to right, #56ccf2, #2f80ed);
+}
+
+.scroll-card.minimalism {
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+    color: #333;
+}
+
+.scroll-card.selfcare {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+    color: #333;
+}
+
+.scroll-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.scroll-card h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.scroll-card p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.scroll-card .btn {
+    font-size: 14px;
+    padding: 6px 14px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.scroll-card .btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 600px) {
+    .scroll-card {
+        width: 220px;
+        padding: 16px;
+    }
+
+    .scroll-card h4 {
+        font-size: 16px;
+    }
+
+    .scroll-card p {
+        font-size: 13px;
+    }
+
+    .scroll-card .btn {
+        font-size: 13px;
+    }
+}
+/* Fix: Center main content and limit width */
+.container {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+/* Global container normalization */
+.top-bar, .navbar-nav {
+  margin-bottom: 20px;
+}
+
+/* Form containers in signup/login/dashboard */
+.sign-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+/* Profile & dashboard sections */
+.profile-section, .dashboard-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+/* Post cards in dashboard & profile */
+.post-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: white;
+  padding: 1.4rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.post-card .post-content {
+  flex: 1;
+}
+
+.post-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-left: 16px;
+  border-radius: 6px;
+}
+
+/* Buttons styling */
+.btn-edit, .btn-delete {
+  padding: 4px 8px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn-edit {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Ensure consistency with index card hover */
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+  .post-card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .post-card img {
+    margin: 0 0 10px 0;
+  }
+}
+
+/* Show/Hide Toggler */
+.extra-info {
+    display: none; /* This will hide all extra-info divs by default */
+}
+
+.extra-info.visible {
+    display: block; /* This class will make the div visible */
+}

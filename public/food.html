@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food | Wander & Wellness</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fffaf6;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      padding: 30px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    .recipes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 360px;
+      height: auto;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .card-content h3 {
+      margin: 0 0 12px;
+      font-size: 1.3rem;
+      color: #b83280;
+    }
+
+    .card-content p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .extra-info {
+      display: none;
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .read-more-btn {
+      margin-top: 12px;
+      background-color: #b83280;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .read-more-btn:hover {
+      background-color: #9d276d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background-color: #fceff9;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Wholesome Food Ideas</h1>
+    <p>Delicious recipes for a balanced lifestyle</p>
+  </header>
+
+  <section class="recipes">
+    <div class="card">
+      <img src="images/avocado_toast.jpg" alt="Avocado Toast" />
+      <div class="card-content">
+        <h3>Avocado Toast</h3>
+        <p>Healthy, quick, and tasty — top your toast with mashed avocado, cherry tomatoes, and a sprinkle of chili flakes.</p>
+        <div class="extra-info">Try adding poached eggs or hemp seeds for added protein!</div>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/oats_bowl.webp" alt="Oats Bowl" />
+      <div class="card-content">
+        <h3>Overnight Oats</h3>
+        <p>Mix oats, milk, and honey overnight. Add fruits and nuts in the morning for a fiber-rich breakfast.</p>
+        <div class="extra-info">Chia seeds and cinnamon enhance both taste and health benefits.</div>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/buddha_bowl.jpg" alt="Buddha Bowl" />
+      <div class="card-content">
+        <h3>Buddha Bowl</h3>
+        <p>Colorful veggies, quinoa, and hummus — a nourishing bowl packed with vitamins and protein.</p>
+        <div class="extra-info">Drizzle tahini-lemon dressing for an extra zing.</div>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/fruit_smoothie.jpg" alt="Fruit Smoothie" />
+      <div class="card-content">
+        <h3>Fruit Smoothie</h3>
+        <p>Blend seasonal fruits with yogurt or almond milk. Refreshing and perfect for post-workout recovery.</p>
+        <div class="extra-info">Add flax seeds or protein powder for an energy boost.</div>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/chickpea_salad.jpg" alt="Chickpea Salad" />
+      <div class="card-content">
+        <h3>Chickpea Salad</h3>
+        <p>A protein-rich salad with chickpeas, cucumber, onion, lemon juice, and olive oil.</p>
+        <div class="extra-info">Add feta cheese and mint leaves for Mediterranean flair.</div>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/grilled_veggies.jpg" alt="Grilled Veggies" />
+      <div class="card-content">
+        <h3>Grilled Veggies</h3>
+        <p>Seasonal vegetables grilled to perfection — a low-calorie, high-flavor meal with herbs and olive oil.</p>
+        <div class="extra-info">Best paired with whole grain bread or brown rice.</div>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Wander & Wellness. All rights reserved.
+  </footer>
+
+  <script src="../js/food.js"></script>
+</body>
+</html>
